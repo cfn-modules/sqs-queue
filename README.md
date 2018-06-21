@@ -47,14 +47,14 @@ Resources:
   <tbody>
     <tr>
       <td>AlertingModule</td>
-      <td>Stack name of alerting module</td>
+      <td>Stack name of <a href="https://www.npmjs.com/package/@cfn-modules/alerting">alerting module</a></td>
       <td></td>
       <td>no</td>
       <td></td>
     </tr>
     <tr>
       <td>KmsKeyModule</td>
-      <td>Stack name of KMS key module</td>
+      <td>Stack name of <a href="https://www.npmjs.com/package/@cfn-modules/kms-key">kms-key module</a></td>
       <td></td>
       <td>no</td>
       <td></td>

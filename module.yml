@@ -124,7 +124,7 @@ Outputs:
   ModuleId:
     Value: 'sqs-queue'
   ModuleVersion:
-    Value: '0.0.3'
+    Value: '0.0.4'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:
