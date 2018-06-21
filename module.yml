@@ -92,12 +92,9 @@ Resources:
         Statement:
         - Effect: Allow
           Principal:
-            Service: 's3.amazonaws.com'
+            AWS: '*' # TODO how can we limit this to one account?
           Action: 'sqs:SendMessage'
           Resource: !GetAtt 'Queue.Arn'
-          Condition:
-            StringEquals:          
-              'aws:SourceAccount': !Ref 'AWS::AccountId'
       Queues:
       - !Ref Queue
   QueueTooHighAlarm:
@@ -147,7 +144,7 @@ Outputs:
   ModuleId:
     Value: 'sqs-queue'
   ModuleVersion:
-    Value: '0.0.5'
+    Value: '0.0.6'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:
