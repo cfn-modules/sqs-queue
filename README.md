@@ -101,5 +101,12 @@ Resources:
       <td>no</td>
       <td>[0-43200]</td>
     </tr>
+    <tr>
+      <td>S3BucketAccess</td>
+      <td>Allow send message access from S3 buckets from the same AWS account?</td>
+      <td>true</td>
+      <td>no</td>
+      <td>[true, false]</td>
+    </tr>
   </tbody>
 </table>
