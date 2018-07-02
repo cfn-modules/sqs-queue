@@ -60,15 +60,9 @@ Parameters:
     Default: 30
     MinValue: 0
     MaxValue: 43200
-  S3BucketAccess:
-    Description: 'Allow send message access from S3 buckets from the same AWS account?'
-    Type: String
-    Default: true
-    AllowedValues: [true, false]
 Conditions:
   HasAlertingModule: !Not [!Equals [!Ref AlertingModule, '']]
   HasKmsKeyModule: !Not [!Equals [!Ref KmsKeyModule, '']]
-  HasS3BucketAccess: !Equals [!Ref S3BucketAccess, true]
 Resources:
   Queue:
     Type: 'AWS::SQS::Queue'
@@ -83,20 +77,6 @@ Resources:
         deadLetterTargetArn: !GetAtt 'DeadLetterQueue.Arn'
         maxReceiveCount: 5
       VisibilityTimeout: !Ref VisibilityTimeout
-  QueuePolicy:
-    Condition: HasS3BucketAccess
-    Type: 'AWS::SQS::QueuePolicy'
-    Properties:
-      PolicyDocument:
-        Version: '2008-10-17'
-        Statement:
-        - Effect: Allow
-          Principal:
-            AWS: '*' # TODO how can we limit this to one account?
-          Action: 'sqs:SendMessage'
-          Resource: !GetAtt 'Queue.Arn'
-      Queues:
-      - !Ref Queue
   QueueTooHighAlarm:
     Condition: HasAlertingModule
     Type: 'AWS::CloudWatch::Alarm'
@@ -144,7 +124,7 @@ Outputs:
   ModuleId:
     Value: 'sqs-queue'
   ModuleVersion:
-    Value: '0.0.6'
+    Value: '0.0.7'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:
