@@ -82,7 +82,7 @@ Resources:
     Type: 'AWS::CloudWatch::Alarm'
     Properties:
       AlarmActions:
-      - 'Fn::ImportValue': !Sub '${AlertingModule}-Ar' # break on purpose for testing
+      - 'Fn::ImportValue': !Sub '${AlertingModule}-Arn'
       AlarmDescription: 'Queue contains messages older than 10 minutes, messages are not consumed'
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
