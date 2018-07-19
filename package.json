@@ -4,25 +4,18 @@
   "description": "AWS SQS queue with a dead letter queue, encryption, and alerting",
   "author": "Michael Wittig <michael@widdix.de>",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "eslint": "5.1.0",
-    "ava": "0.25.0",
-    "@cfn-modules/test": "^0.0.7",
-    "@cfn-modules/kms-key": "^0.0.3",
-    "@cfn-modules/alerting": "^0.0.5"
-  },
-  "scripts": {
-    "eslint": "eslint test",
-    "ava": "ava -c 4",
-    "test": "eslint test && ava -c 4"
-  },
-  "keywords": ["cfn-modules", "cfn-modules:ExposeArn", "cfn-modules:ExposeName", "cfn-modules:LambdaDependency"],
+  "keywords": [
+    "cfn-modules",
+    "cfn-modules:ExposeArn",
+    "cfn-modules:ExposeName",
+    "cfn-modules:LambdaDependency"
+  ],
   "homepage": "https://github.com/cfn-modules",
   "bugs": {
     "url": "https://github.com/cfn-modules/sqs-queue/issues"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/cfn-modules/sqs-queue.git"
+    "type": "git",
+    "url": "https://github.com/cfn-modules/sqs-queue.git"
   }
 }

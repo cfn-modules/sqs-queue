@@ -5,4 +5,4 @@ Resources:
   Queue:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
-      TemplateURL: '../module.yml'
+      TemplateURL: './node_modules/@cfn-modules/sqs-queue/module.yml'

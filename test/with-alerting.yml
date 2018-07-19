@@ -5,10 +5,10 @@ Resources:
   Alerting:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
-      TemplateURL: '../node_modules/@cfn-modules/alerting/module.yml'
+      TemplateURL: './node_modules/@cfn-modules/alerting/module.yml'
   Queue:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
       Parameters:
         AlertingModule: !GetAtt 'Alerting.Outputs.StackName'
-      TemplateURL: '../module.yml'
+      TemplateURL: './node_modules/@cfn-modules/sqs-queue/module.yml'
