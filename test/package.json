@@ -9,6 +9,6 @@
     "@cfn-modules/kms-key": "^0.0.3"
   },
   "scripts": {
-    "test": "eslint . && ava -c 4 ."
+    "test": "eslint . && ava -c 4 *.js"
   }
 }
