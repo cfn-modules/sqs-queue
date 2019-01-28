@@ -124,7 +124,7 @@ Outputs:
   ModuleId:
     Value: 'sqs-queue'
   ModuleVersion:
-    Value: '1.0.0'
+    Value: '1.1.0'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:
@@ -132,7 +132,7 @@ Outputs:
     Export:
       Name: !Sub '${AWS::StackName}-Arn'
   IamActions:
-    Value: 'sqs:ChangeMessageVisibility*,sqs:DeleteMessage*,sqs:ReceiveMessage,sqs:SendMessage*'
+    Value: 'sqs:ChangeMessageVisibility*,sqs:DeleteMessage*,sqs:GetQueueUrl,sqs:ReceiveMessage,sqs:SendMessage*'
     Export:
       Name: !Sub '${AWS::StackName}-IamActions'
   IamResources:
