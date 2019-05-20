@@ -34,6 +34,7 @@ Resources:
         VisibilityTimeout: 0 # optional
       TemplateURL: './node_modules/@cfn-modules/sqs-queue/module.yml'
 ```
+
 ## Examples
 
 * [serverless-iam](https://github.com/cfn-modules/docs/tree/master/examples/serverless-iam)
