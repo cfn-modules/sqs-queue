@@ -34,6 +34,16 @@ Resources:
         VisibilityTimeout: 0 # optional
       TemplateURL: './node_modules/@cfn-modules/sqs-queue/module.yml'
 ```
+## Examples
+
+* [serverless-iam](https://github.com/cfn-modules/docs/tree/master/examples/serverless-iam)
+* [serverless-image-resize](https://github.com/cfn-modules/docs/tree/master/examples/serverless-image-resize)
+* [serverless-sqs-queue](https://github.com/cfn-modules/docs/tree/master/examples/serverless-sqs-queue)
+
+## Related modules
+
+* [lambda-event-source-sqs-queue](https://github.com/cfn-modules/lambda-event-source-sqs-queue)
+* [kinesis-data-stream](https://github.com/cfn-modules/kinesis-data-stream)
 
 ## Parameters
 
