@@ -1,6 +1,6 @@
 {
   "name": "@cfn-modules/sqs-queue",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "AWS SQS queue with a dead letter queue, encryption, and alerting",
   "author": "Michael Wittig <michael@widdix.de>",
   "license": "Apache-2.0",
