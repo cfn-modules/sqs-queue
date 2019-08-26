@@ -96,6 +96,7 @@ Resources:
       Period: 60
       Statistic: Maximum
       Threshold: 600
+      TreatMissingData: notBreaching
   DeadLetterQueue:
     Type: 'AWS::SQS::Queue'
     Properties:
@@ -121,11 +122,12 @@ Resources:
       Period: 60
       Statistic: Sum
       Threshold: 0
+      TreatMissingData: notBreaching
 Outputs:
   ModuleId:
     Value: 'sqs-queue'
   ModuleVersion:
-    Value: '1.1.1'
+    Value: '1.2.0'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:
