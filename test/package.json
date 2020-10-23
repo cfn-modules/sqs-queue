@@ -5,7 +5,7 @@
     "ava": "3.11.1",
     "@cfn-modules/test": "0.7.3",
     "@cfn-modules/sqs-queue": "file:../",
-    "@cfn-modules/alerting": "1.2.0",
+    "@cfn-modules/alerting": "1.2.1",
     "@cfn-modules/kms-key": "1.2.1"
   },
   "scripts": {
